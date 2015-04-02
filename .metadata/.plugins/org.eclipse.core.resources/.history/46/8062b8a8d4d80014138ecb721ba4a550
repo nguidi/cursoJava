@@ -1,0 +1,19 @@
+package utn.hola.mundo;
+
+public class HolaMundo {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// Imprimo en pantallas las palabras "Hola Mundo"
+		System.out.println("Hola Mundo");
+		//	Creo una nueva persona
+		Persona p = new Persona("Mario",20);
+		//	Utilizo el getter para consultar su edad y lo asigno a una variable
+		String pAge = p.howOldAreYou();
+		//	Imprimo en pantalla la edad
+		System.out.println(pAge);
+	}
+
+}

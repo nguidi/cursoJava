@@ -1,0 +1,28 @@
+//	Nombre del paquete
+package utn.hola.mundo;
+
+import java.util.Scanner;
+
+
+//	Importamos el scanner para poder leer desde la consola
+
+//	Clase publica
+public class HolaMundo {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// Imprimo en pantallas las palabras "Hola Mundo"
+		System.out.println("Hola Mundo");
+		//	Creo una nueva persona
+		Persona p = new Persona("Mario",20);
+		//	Utilizo el getter para consultar su edad y lo asigno a una variable
+		String pAge = p.howOldAreYou();
+		//	Imprimo en pantalla la edad
+		System.out.println(pAge);
+		
+		Scanner scan = new Scanner(System.in);
+	}
+
+}

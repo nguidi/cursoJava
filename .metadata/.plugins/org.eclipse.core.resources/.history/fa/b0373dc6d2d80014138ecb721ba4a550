@@ -1,0 +1,31 @@
+package utn.hola.mundo;
+
+public class Persona {
+	
+	//	Declaracion de Variables
+	private String name;
+	private int age;
+	
+	//	Constructores de la clase
+	
+	//	Constructor vacio
+	public Persona() {
+		
+	}
+	//	Constructor donde se instancia el name
+	public Persona(String newName) {
+		/*
+		 *  Si bien no es necesario lo podemos poner.
+		 *  Obligua el llamado al constructor
+		 */
+		this();
+		this.name = newName;
+	}
+	//	Constructor donde se instancia el name y age
+	public Persona(String newName, int newAge) {
+		//	Llamo al constructor donde instancia el name
+		this(newName);
+		this.age = newAge;
+	}
+	
+}

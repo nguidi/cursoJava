@@ -1,0 +1,19 @@
+package utn.hola.mundo;
+
+public class Persona {
+	
+	//	Declaracion de Variables
+	private String name;
+	private int age;
+	
+	//	Constructores de la clase
+	public Persona() {
+		
+	}
+	
+	public Persona(String newName, int newAge) {
+		this.name = newName;
+		this.age = newAge;
+	}
+	
+}
