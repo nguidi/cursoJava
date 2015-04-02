@@ -53,8 +53,7 @@ public class Persona {
 	public String howOldAreYou() {
 		return "Tengo "+this.age+" años.";
 	}
-	//	Redefino un getter. Por defecto toString aplicado a un objeto devuelve su nombre y id en memoria.
-	//	Por ejemplo: utn.hola.mundo.Persona@as45qw45
+	//	Redefino un getter
 	public String toString() {
 		return "Hola mi nombre es "+this.name+". "+this.howOldAreYou();
 	}

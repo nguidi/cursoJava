@@ -58,11 +58,7 @@ public class HolaMundo {
 			System.out.println("Error loco?");
 		}
 		//	Disparo un error
-		try {
-			throw new Exception();
-		} catch(Exception e) {
-			System.out.println("Error loco adrede?");
-		}
+		throw new Exception();
 	}
 
 }

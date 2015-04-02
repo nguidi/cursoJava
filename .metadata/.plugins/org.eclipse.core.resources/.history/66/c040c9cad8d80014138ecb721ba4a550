@@ -46,22 +46,12 @@ public class HolaMundo {
 		System.out.println(p.toString());
 		
 		//	El metodo try..catch intenta ejectuar un codigo y se falla podemos captar el error
-		//	print no hace salto de linea
-		System.out.print("Ingrese la nueva edad: ");
 		try{
 			p.setAge( scan.nextInt() );
 		} catch(InputMismatchException e) {	//	Verifica si la excepcion es de ese tipo
 			p.setAge(0);
-		} catch(Exception e) {	// Si es cualquier tipo de error
-			System.out.println("El valor ingresado no es correcto");
-		} finally { // Si ninguna de las anteriores fue suficient hace esto
-			System.out.println("Error loco?");
-		}
-		//	Disparo un error
-		try {
-			throw new Exception();
 		} catch(Exception e) {
-			System.out.println("Error loco adrede?");
+			System.out.println("El valor ingresado no es correcto");
 		}
 	}
 

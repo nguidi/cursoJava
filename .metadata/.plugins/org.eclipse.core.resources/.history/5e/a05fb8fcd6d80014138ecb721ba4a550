@@ -1,7 +1,6 @@
 //	Nombre del paquete
 package utn.hola.mundo;
 
-import java.util.InputMismatchException;
 import java.util.Scanner;
 
 
@@ -16,53 +15,25 @@ public class HolaMundo {
 	public static void main(String[] args) {
 		// Imprimo en pantallas las palabras "Hola Mundo"
 		System.out.println("Hola Mundo");
-		
 		//	Creo una nueva persona
 		Persona p = new Persona("Mario",20);
-		
 		//	Utilizo el getter para consultar su edad y lo asigno a una variable
 		String pAge = p.howOldAreYou();
-		
 		//	Imprimo en pantalla la edad
 		System.out.println(pAge);
-		
 		//	Creo un objeto llamado scan, instancia de la clase scanner
 		//	System.in es lectura de consola
 		Scanner scan = new Scanner(System.in);
-		
-		//	print no hace salto de linea
-		System.out.print("Ingrese la nueva edad: ");
-		
+		//	Le pido la nueva edad
+		System.out.println("Ingrese la nueva edad: ");
 		//	Espero que ingrese el valor del nombre
 		Integer pNewAge = scan.nextInt();
-		
 		//	Uso el setter de persona para ingresar la edad
 		p.setAge(pNewAge);
-		
 		//	Utilizo el getter para consultar la nueva edad y lo asigno a una variable
 		pAge = p.howOldAreYou();
-		
 		//	Imprimo en pantalla la edad
-		System.out.println(p.toString());
-		
-		//	El metodo try..catch intenta ejectuar un codigo y se falla podemos captar el error
-		//	print no hace salto de linea
-		System.out.print("Ingrese la nueva edad: ");
-		try{
-			p.setAge( scan.nextInt() );
-		} catch(InputMismatchException e) {	//	Verifica si la excepcion es de ese tipo
-			p.setAge(0);
-		} catch(Exception e) {	// Si es cualquier tipo de error
-			System.out.println("El valor ingresado no es correcto");
-		} finally { // Si ninguna de las anteriores fue suficient hace esto
-			System.out.println("Error loco?");
-		}
-		//	Disparo un error
-		try {
-			throw new Exception();
-		} catch(Exception e) {
-			System.out.println("Error loco adrede?");
-		}
+		System.out.println(pAge);
 	}
 
 }
