@@ -1,2 +1,0 @@
-[User| username; password;]-[Post| points; content]
-[Post]-[Comment| content;]
