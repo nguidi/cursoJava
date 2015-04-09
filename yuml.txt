@@ -1,0 +1,2 @@
+[User| username; | crearPost]-[Post| points; content| comentarPost; puntearPost;]
+[Post]-[Comment| content;]
