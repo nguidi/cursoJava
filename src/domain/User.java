@@ -21,9 +21,9 @@ public class User {
 	// Constructor de User
 	public User(String nuevoNombre) {
 		// Inicializo los posts del usuario.
-		this.posts = new ArrayList<Post>();
+		this.setPosts(new ArrayList<Post>());
 		// Inicializamos el nombre del usuario
-		this.username = nuevoNombre;
+		this.setUsername(nuevoNombre);
 	}
 
 	// Creara un Post del Usuaro
@@ -34,6 +34,14 @@ public class User {
 		this.posts.add(nuevoPost);
 		
 		return nuevoPost;
+	}
+
+	public List<Post> getPosts() {
+		return posts;
+	}
+
+	public void setPosts(List<Post> posts) {
+		this.posts = posts;
 	}
 
 	public String getUsername() {

@@ -27,11 +27,11 @@ public class Post {
 	// Constructor del Post
 	public Post(String tituloDelPost, String contenidoDelPost) {
 		// Inicializo el puntaje del post a 0.
-		this.points = 0;
+		this.setPoints(0);
 		// Inicializo el titulo del post.
-		this.title = tituloDelPost;
+		this.setTitle(tituloDelPost);
 		// Inicializo el contenido del post.
-		this.content = contenidoDelPost;
+		this.setContent(contenidoDelPost);
 	}
 
 	// Comentar un post
@@ -47,12 +47,43 @@ public class Post {
 	public void puntuarPost(int nuevoPuntaje) {
 		// Suma el Nuevo Puntaje al ya existente.
 		this.points += nuevoPuntaje;
-
+	}
+	
+	public void imprimite() {
+		System.out.println(this.getTitle());
+		System.out.println(this.getContent());
+		System.out.println(this.getPoints());
+	}
+	
+	public int getPoints() {
+		return points;
 	}
 
-	public void imprimite() {
-		System.out.println(this.title);
-		System.out.println(this.content);
-		System.out.println(this.points);
+	public void setPoints(int points) {
+		this.points = points;
+	}
+
+	public String getContent() {
+		return content;
+	}
+
+	public void setContent(String content) {
+		this.content = content;
+	}
+
+	public String getTitle() {
+		return title;
+	}
+
+	public void setTitle(String title) {
+		this.title = title;
+	}
+
+	public List<Comment> getComments() {
+		return comments;
+	}
+
+	public void setComments(List<Comment> comments) {
+		this.comments = comments;
 	}
 }

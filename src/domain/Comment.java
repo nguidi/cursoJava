@@ -16,8 +16,16 @@ public class Comment {
 	// Constructor del comentario
 	public Comment(String nuevoContenido) {
 		// Setea el nuevo comentario al Comment
-		this.content = nuevoContenido;
+		this.setContent(nuevoContenido);
 
+	}
+
+	public String getContent() {
+		return content;
+	}
+
+	public void setContent(String content) {
+		this.content = content;
 	}
 
 }

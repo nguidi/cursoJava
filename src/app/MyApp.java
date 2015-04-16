@@ -23,6 +23,8 @@ public class MyApp {
 		
 		Scanner scan = new Scanner(System.in);
 		
+		scan.useDelimiter("\\n");
+		
 		System.out.println("¿Quien te conoce gato?");
 				
 		User user = this.nuevoUsuario(scan.next());
@@ -41,6 +43,13 @@ public class MyApp {
 		
 		nuevoPost.imprimite();
 		
+		System.out.println("Comenta alguna boludez:");
+		
+		nuevoPost.comentarPost(scan.next());
+		
+		System.out.println(nuevoPost.getComments().get(1));
+		
+		scan.close();
 		
 	}
 	
