@@ -1,6 +1,17 @@
-package model;
+package domain;
 import java.util.ArrayList;
 import java.util.List;
+
+/**
+ * @class	Post
+ * @type	Model
+ * @desc	Post de un Usuario
+ * @attr
+ * 		points		::int
+ * 		content		::String
+ * 		title		::String
+ * 		comments	::List<Comment>
+ */
 
 public class Post {
 
@@ -25,7 +36,6 @@ public class Post {
 
 	// Comentar un post
 	public void comentarPost(String contenidoDelComentario) {
-
 		// Crea un nuevo comentario.
 		Comment nuevoComentario = new Comment(contenidoDelComentario);
 		// Agrega el nuevo comentario al listado de comentarios.
@@ -35,10 +45,14 @@ public class Post {
 
 	// Puntuar un post
 	public void puntuarPost(int nuevoPuntaje) {
-
 		// Suma el Nuevo Puntaje al ya existente.
 		this.points += nuevoPuntaje;
 
 	}
 
+	public void imprimite() {
+		System.out.println(this.title);
+		System.out.println(this.content);
+		System.out.println(this.points);
+	}
 }
